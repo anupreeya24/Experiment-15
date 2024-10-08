@@ -155,6 +155,41 @@ int main() {
     return 0;
 }
 ```
+### Algorithm for Reversing a String using Recursion
 
+1. **Function Definition**: Define a function `rev(char* str)` that takes a character pointer `str` as a parameter.
+
+2. **Base Case**:
+   - If the character pointed to by `str` is not equal to the null character (`'\0'`), proceed to the next step.
+
+3. **Recursive Case**:
+   - Call `rev(str + 1)` to process the next character.
+   - After the recursive call returns, print the current character (`*str`).
+
+4. **Main Function**:
+   - Declare a character array `str` initialized to "program".
+   - Call the `rev(str)` function to reverse and print the string.
+
+5. **End**.
+
+### Code
+
+```cpp
+#include <iostream>
+using namespace std;
+
+void rev(char* str) {
+   if (*str != '\0') {
+       rev(str + 1);
+       cout << *str;
+   }
+}
+
+int main() {
+    char str[] = "program";
+    rev(str);
+    return 0;
+}
+```
 ### Conclusion:
 Recursion is a powerful programming technique that allows for elegant and efficient solutions to a variety of problems. Understanding how to properly implement and manage recursive functions is essential for any programmer. By mastering recursion, developers can write cleaner, more maintainable code while effectively solving complex problems that can be broken down into simpler subproblems. The ability to identify suitable problems for recursion and to manage base and recursive cases is crucial for successful implementation.
