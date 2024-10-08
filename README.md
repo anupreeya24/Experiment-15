@@ -21,6 +21,7 @@ Recursion is a method of solving problems where a function calls itself directly
 - **Data Structures**: Traversing trees and graphs.
 - **Algorithms**: Implementing algorithms like quicksort, mergesort, and depth-first search.
 
+
 ### Algorithm for Recursive Addition
 
 1. **Function Definition**: Define a function `add(int a, int b)` that takes two integers as parameters.
@@ -41,6 +42,44 @@ Recursion is a method of solving problems where a function calls itself directly
    - Output the value of `sum`.
 
 5. **End**.
+### Algorithm for Factorial Calculation using Recursion
+
+1. **Function Definition**: Define a function `fact(int n)` that takes an integer `n` as a parameter.
+
+2. **Base Case**:
+   - If `n` is less than or equal to `1`, return `1`. This is the stopping condition for the recursion.
+
+3. **Recursive Case**:
+   - If `n` is greater than `1`, return the product of `n` and the result of `fact(n - 1)`.
+
+4. **Main Function**:
+   - Declare an integer variable `a`.
+   - Prompt the user to input a value for `a`.
+   - Call the `fact(a)` function and output the result.
+
+5. **End**.
+
+### Code
+
+```cpp
+#include<iostream>
+using namespace std;
+
+int fact(int n) {
+    if(n <= 1)
+        return 1;
+    else 
+        return (n * fact(n - 1));
+}
+
+int main() {
+    int a;
+    cout << "Enter an integer: ";
+    cin >> a;
+    cout << "Factorial is: " << fact(a) << endl;
+    return 0;
+}
+```
 
 ### Conclusion:
 Recursion is a powerful programming technique that allows for elegant and efficient solutions to a variety of problems. Understanding how to properly implement and manage recursive functions is essential for any programmer. By mastering recursion, developers can write cleaner, more maintainable code while effectively solving complex problems that can be broken down into simpler subproblems. The ability to identify suitable problems for recursion and to manage base and recursive cases is crucial for successful implementation.
