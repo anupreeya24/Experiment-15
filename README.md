@@ -111,5 +111,50 @@ int main() {
 }
 ```
 
+### Algorithm for Reversing a Number using Recursion
+
+1. **Function Definition**: Define a function `revnum(int n)` that takes an integer `n` as a parameter.
+
+2. **Base Case**:
+   - If `n` is equal to `0`, return. This stops the recursion.
+
+3. **Recursive Case**:
+   - Print the last digit of `n` using `n % 10`.
+   - Call `revnum(n / 10)` to process the remaining digits.
+
+4. **Main Function**:
+   - Declare an integer variable `num`.
+   - Prompt the user to input a value for `num`.
+   - Print "Reversed: " and call the `revnum(num)` function.
+
+5. **End**.
+
+### Code
+
+```cpp
+#include<iostream>
+using namespace std;
+
+void revnum(int n) {
+    if (n == 0)
+        return;
+
+    cout << n % 10;
+    revnum(n / 10);
+}
+
+int main() {
+    int num;
+    cout << "Enter an integer: ";
+    cin >> num;
+    
+    cout << "Reversed: ";
+    revnum(num);
+    cout << endl;
+
+    return 0;
+}
+```
+
 ### Conclusion:
 Recursion is a powerful programming technique that allows for elegant and efficient solutions to a variety of problems. Understanding how to properly implement and manage recursive functions is essential for any programmer. By mastering recursion, developers can write cleaner, more maintainable code while effectively solving complex problems that can be broken down into simpler subproblems. The ability to identify suitable problems for recursion and to manage base and recursive cases is crucial for successful implementation.
